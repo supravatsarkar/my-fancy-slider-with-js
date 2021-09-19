@@ -8,12 +8,14 @@ const images = [
     'images/fruit-7.jpg'
 ]
 
+const imgElement = document.getElementById('img-element');
 let imgIndex = 0;
 setInterval(() => {
     if (imgIndex >= images.length) {
         imgIndex = 0;
     }
     imgUrl = images[imgIndex];
-    console.log(imgUrl);
+    imgElement.setAttribute('src', imgUrl);
+    // console.log(imgUrl);
     imgIndex++;
-}, 1000)
+}, 1300)
